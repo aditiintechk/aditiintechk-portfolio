@@ -614,6 +614,21 @@ body {
 	color: var(--bg-primary);
 }
 
+.project-link-disabled {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.625rem 1.125rem;
+	border-radius: 8px;
+	font-size: 0.875rem;
+	font-weight: 500;
+	background-color: var(--accent-secondary);
+	color: var(--text-muted);
+	border: 1px solid var(--border-color);
+	cursor: not-allowed;
+	letter-spacing: -0.01em;
+}
+
 /* Certifications Grid */
 .certifications-grid {
 	display: grid;

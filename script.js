@@ -294,13 +294,3 @@ if ('PerformanceObserver' in window) {
 
 	perfObserver.observe({ entryTypes: ['measure'] })
 }
-
-// Add console message
-console.log(
-	'%c👋 Welcome to my portfolio!',
-	'font-size: 20px; font-weight: bold; color: #3b82f6;'
-)
-console.log(
-	"%cLike what you see? Let's connect!",
-	'font-size: 14px; color: #6b7280;'
-)
