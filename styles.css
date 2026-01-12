@@ -64,47 +64,6 @@ body {
 	padding: 3rem 2rem;
 }
 
-/* Theme Toggle Button */
-.theme-toggle {
-	position: fixed;
-	top: 2rem;
-	right: 2rem;
-	width: 44px;
-	height: 44px;
-	border-radius: 50%;
-	border: 1px solid var(--border-color);
-	background-color: var(--bg-card);
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-	z-index: 1000;
-	box-shadow: var(--shadow-md);
-}
-
-.theme-toggle:hover {
-	transform: scale(1.05);
-	box-shadow: var(--shadow-lg);
-	border-color: var(--text-muted);
-}
-
-.theme-toggle .sun-icon {
-	display: none;
-}
-
-.theme-toggle .moon-icon {
-	display: block;
-}
-
-[data-theme='dark'] .theme-toggle .sun-icon {
-	display: block;
-}
-
-[data-theme='dark'] .theme-toggle .moon-icon {
-	display: none;
-}
-
 /* Hero Section */
 .hero-section {
 	text-align: center;
@@ -147,6 +106,10 @@ body {
 	margin-bottom: 0.5rem;
 	font-weight: 500;
 	letter-spacing: -0.01em;
+}
+
+.hero-subtitle span {
+	border-bottom: 2px solid #aeabab;
 }
 
 .hero-tagline {
@@ -542,12 +505,7 @@ body {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 1.25rem;
-}
-
-@media (min-width: 640px) {
-	.projects-grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
+	max-width: 100%;
 }
 
 .project-card {
@@ -880,13 +838,6 @@ body {
 
 	.section-title {
 		font-size: 1.5rem;
-	}
-
-	.theme-toggle {
-		top: 1.25rem;
-		right: 1.25rem;
-		width: 40px;
-		height: 40px;
 	}
 
 	.dock {

@@ -1,26 +1,3 @@
-/* // Theme Management
-const themeToggle = document.getElementById('theme-toggle');
-const html = document.documentElement;
-
-// Check for saved theme preference or default to light mode
-const currentTheme = localStorage.getItem('theme') || 'light';
-html.setAttribute('data-theme', currentTheme);
-
-// Theme toggle functionality
-themeToggle.addEventListener('click', () => {
-    const currentTheme = html.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-
-    // Add a subtle animation to the button
-    themeToggle.style.transform = 'rotate(360deg)';
-    setTimeout(() => {
-        themeToggle.style.transform = 'rotate(0deg)';
-    }, 300);
-}); */
-
 // Smooth scroll for dock navigation
 document.querySelectorAll('.dock-item[href^="#"]').forEach((anchor) => {
 	anchor.addEventListener('click', function (e) {
@@ -106,34 +83,6 @@ window.addEventListener(
 	},
 	{ passive: true }
 )
-
-// Enhanced card hover effects
-const cards = document.querySelectorAll('.card')
-
-cards.forEach((card) => {
-	card.addEventListener('mouseenter', function () {
-		this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
-	})
-
-	card.addEventListener('mousemove', function (e) {
-		const rect = this.getBoundingClientRect()
-		const x = e.clientX - rect.left
-		const y = e.clientY - rect.top
-
-		const centerX = rect.width / 2
-		const centerY = rect.height / 2
-
-		const rotateX = (y - centerY) / 20
-		const rotateY = (centerX - x) / 20
-
-		this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`
-	})
-
-	card.addEventListener('mouseleave', function () {
-		this.style.transform =
-			'perspective(1000px) rotateX(0) rotateY(0) translateY(0)'
-	})
-})
 
 // Add typing effect to hero title (optional)
 const heroTitle = document.querySelector('.hero-title')
